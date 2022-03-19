@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heal Hub Locator</title>
+        <script src="js/Medenin-data.js"></script>
+        <script src="js/Medenin.js"></script>
+        <link rel="stylesheet" href="style/Medenin.css">
+        <script src="https://kit.fontawesome.com/1e62f9103e.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="title">Heal-Hub</div>
+        <div class="search-container">
+            <div class="search-box">
+                <input id="zip-code" type="number" placeholder="Enter Pin-Code"/>
+                <i class="fas fa-search" id="yo" onclick="searchStores()"></i>
+                <div class="alan-btn"></div>
+                
+            </div>
+        </div>
+        
+ <div class="store-list-container">
+    <div class="store-list">
+        <div class="stores-name">
+               Dr. Rajiv Agarwal-<span class="dot1">1</span>
+                <div class="stores-address">
+                Csc II,D D A Market,Shop No 10,G-block,Preet Vihar,Near Mother,D D A Market,Delhi-110092.
+                </div>
+                <div class="stores-phone">
+                 Ph- 011-2245-2184
+                </div>
+                <div class="stores-beds">
+                    10
+                </div>
+                <hr>
+        </div>
+   </div>       
+ </div>        
+        <div id="map"></div>
+        <!--<footer id="footer">
+			<div class="row text-center">
+					<p id="logo">Chaitanya</p>
+				</div>
+			</div>
+		</footer>-->
+        <script>
+            var alanBtnInstance = alanBtn({
+                key: "534b697702063da418214051252215e02e956eca572e1d8b807a3e2338fdd0dc/stage",
+                onCommand: function (commandData) {
+                    if (commandData.command === "go:back") {
+                        // Call the client code that will react to the received command
+                    }
+                },
+                rootEl: document.getElementById("alan-btn"),
+            });
+        </script>
+        
+        <script async defer
+            src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyABIazVmJp2dfZuC3tQUCETUYRDvJoOG3M&callback=initMap">
+        
+    </script>
+    </body>
+</html>
